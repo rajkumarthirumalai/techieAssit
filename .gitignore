@@ -16,7 +16,6 @@ pnpm-debug.log*
 
 # Package managers / dependencies (if introduced later)
 node_modules/
-vendor/
 
 # Build outputs (if any)
 dist/
