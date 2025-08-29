@@ -1,0 +1,44 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package managers / dependencies (if introduced later)
+node_modules/
+vendor/
+
+# Build outputs (if any)
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+out/
+
+# Editors/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+.DS_Store?
+.AppleDouble
+.LSOverride
+Icon?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
