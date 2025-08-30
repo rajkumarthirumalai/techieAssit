@@ -369,7 +369,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: color-mix(in srgb, var(--nav-color) 90%, white 15%);
+    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -1151,37 +1151,48 @@ section,
   transform: scale(1.2);
 }
 
-/*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients {
-  padding: 20px 0;
-}
-
-.clients .client-logo {
+/* New Service Section Styles */
+.service-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.clients .client-logo img {
-  padding: 20px 40px;
-  max-width: 90%;
-  transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
+.service-item-new {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
-.clients .client-logo img:hover {
-  filter: none;
-  opacity: 1;
+.service-item-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 20px;
-  }
+.service-item-new .icon {
+  font-size: 28px;
+  color: var(--accent-color);
+  margin-right: 20px;
+}
+
+.service-item-new h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.service-item-new p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+}
+
+.service-image img {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /*--------------------------------------------------------------
@@ -1846,7 +1857,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# TechieAssist Custom Styles
+# Tekkie Assist Custom Styles
 --------------------------------------------------------------*/
 
 /* Service Details Container */
@@ -2026,7 +2037,7 @@ section,
 }
 
 .bot-message {
-  background: color-mix(in srgb, var(--default-color), transparent 10%);
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
   margin-right: auto;
   border-bottom-left-radius: 5px;
@@ -2036,6 +2047,7 @@ section,
   padding: 15px 20px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
