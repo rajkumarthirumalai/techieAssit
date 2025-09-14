@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -234,120 +234,96 @@
 
         </div>
 
-        <!-- Service Details Tabs -->
-        <div class="service-details-container mt-5" id="serviceDetails" style="display: none;">
-          <div class="container">
-            <ul class="nav nav-tabs row d-flex" data-aos="fade-up" data-aos-delay="100">
-              <li class="nav-item col-3">
-                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#web-development-tab">
-                  <i class="bi bi-code-slash"></i>
-                  <h4 class="d-none d-lg-block">Web Development</h4>
-                </a>
-              </li>
-              <li class="nav-item col-3">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#mobile-apps-tab">
-                  <i class="bi bi-phone"></i>
-                  <h4 class="d-none d-lg-block">Mobile Apps</h4>
-                </a>
-              </li>
-              <li class="nav-item col-3">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#cloud-services-tab">
-                  <i class="bi bi-cloud"></i>
-                  <h4 class="d-none d-lg-block">Cloud Services</h4>
-                </a>
-              </li>
-              <li class="nav-item col-3">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#ai-ml-tab">
-                  <i class="bi bi-robot"></i>
-                  <h4 class="d-none d-lg-block">AI & ML</h4>
-                </a>
-              </li>
-            </ul>
-
-            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-              <div class="tab-pane fade active show" id="web-development-tab">
-                <div class="row">
-                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                    <h3>Full-Stack Web Development Solutions</h3>
-                    <p class="fst-italic">
-                      We create modern, responsive websites and web applications using cutting-edge technologies.
-                    </p>
-                    <ul>
-                      <li><i class="bi bi-check2-all"></i> <span>Frontend Development (React, Vue, Angular)</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Backend Development (Node.js, Python, PHP)</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>E-commerce Solutions</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Progressive Web Apps (PWA)</span></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6 order-1 order-lg-2 text-center">
-                    <img src="./assets/img/working-1.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
+      <!-- Service Details Tabs with 4x2 Grid in Each Tab -->
+      <div class="service-details-container mt-5" id="serviceDetails" style="display: block;">
+        <div class="container"></div>
+        <ul class="nav nav-tabs" id="serviceDetailsTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="web-development-tab" data-bs-toggle="tab" data-bs-target="#web-development" type="button" role="tab" aria-controls="web-development" aria-selected="true">
+              <i class="bi bi-code-slash"></i>
+              <h4>Web Development</h4>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="mobile-apps-tab" data-bs-toggle="tab" data-bs-target="#mobile-apps" type="button" role="tab" aria-controls="mobile-apps" aria-selected="false">
+              <i class="bi bi-phone"></i>
+              <h4>Mobile Apps</h4>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="cloud-services-tab" data-bs-toggle="tab" data-bs-target="#cloud-services" type="button" role="tab" aria-controls="cloud-services" aria-selected="false">
+              <i class="bi bi-cloud"></i>
+              <h4>Cloud Services</h4>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="ai-ml-tab" data-bs-toggle="tab" data-bs-target="#ai-ml" type="button" role="tab" aria-controls="ai-ml" aria-selected="false">
+              <i class="bi bi-robot"></i>
+              <h4>AI & ML</h4>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="serviceDetailsTabsContent">
+          <div class="tab-pane fade show active" id="web-development" role="tabpanel" aria-labelledby="web-development-tab">
+            <div class="service-info-grid-container">
+              <div class="service-info-grid">
+                <div class="service-info-card"><div class="service-info-title">Custom Web Applications</div><div class="service-info-desc">Robust, scalable web solutions tailored for your business needs.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Frontend Development</div><div class="service-info-desc">React, Vue, Angular for modern interfaces.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Backend Development</div><div class="service-info-desc">Node.js, Python, PHP for scalable APIs.</div></div>
+                <div class="service-info-card"><div class="service-info-title">E-commerce Platforms</div><div class="service-info-desc">Online store solutions and payment integration.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Progressive Web Apps</div><div class="service-info-desc">Installable, offline-capable web apps.</div></div>
+                <div class="service-info-card"><div class="service-info-title">CMS Solutions</div><div class="service-info-desc">WordPress, Drupal, custom CMS builds.</div></div>
+                <div class="service-info-card"><div class="service-info-title">API Integration</div><div class="service-info-desc">Connect third-party services and data sources.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Website Optimization</div><div class="service-info-desc">Speed, SEO, and accessibility improvements.</div></div>
               </div>
-
-              <div class="tab-pane fade" id="mobile-apps-tab">
-                <div class="row">
-                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                    <h3>Cross-Platform Mobile Applications</h3>
-                    <p>
-                      We develop native and cross-platform mobile applications that deliver exceptional user experiences across all devices.
-                    </p>
-                    <ul>
-                      <li><i class="bi bi-check2-all"></i> <span>iOS Development (Swift, Objective-C)</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Android Development (Kotlin, Java)</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>React Native & Flutter Apps</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>App Store Optimization</span></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6 order-1 order-lg-2 text-center">
-                    <img src="./assets/img/working-2.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="mobile-apps" role="tabpanel" aria-labelledby="mobile-apps-tab">
+            <div class="service-info-grid-container">
+              <div class="service-info-grid">
+                <div class="service-info-card"><div class="service-info-title">Native iOS Apps</div><div class="service-info-desc">Swift and Objective-C for Apple devices.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Native Android Apps</div><div class="service-info-desc">Kotlin and Java for Android devices.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Cross-Platform Apps</div><div class="service-info-desc">Flutter, React Native for both platforms.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Mobile UI/UX Design</div><div class="service-info-desc">User-centric, intuitive mobile interfaces.</div></div>
+                <div class="service-info-card"><div class="service-info-title">App Store Deployment</div><div class="service-info-desc">Publishing and compliance for app stores.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Mobile API Integration</div><div class="service-info-desc">Connect apps to cloud and third-party APIs.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Push Notifications</div><div class="service-info-desc">Engage users with timely updates.</div></div>
+                <div class="service-info-card"><div class="service-info-title">App Maintenance</div><div class="service-info-desc">Ongoing support and feature updates.</div></div>
               </div>
-
-              <div class="tab-pane fade" id="cloud-services-tab">
-                <div class="row">
-                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                    <h3>Cloud Infrastructure & DevOps</h3>
-                    <p>
-                      We help businesses migrate to the cloud and implement DevOps practices for improved efficiency and scalability.
-                    </p>
-                    <ul>
-                      <li><i class="bi bi-check2-all"></i> <span>AWS, Azure, Google Cloud Solutions</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Container Orchestration (Kubernetes, Docker)</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>CI/CD Pipeline Implementation</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Infrastructure as Code (IaC)</span></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6 order-1 order-lg-2 text-center">
-                    <img src="./assets/img/working-3.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="cloud-services" role="tabpanel" aria-labelledby="cloud-services-tab">
+            <div class="service-info-grid-container">
+              <div class="service-info-grid">
+                <div class="service-info-card"><div class="service-info-title">Cloud Migration</div><div class="service-info-desc">Move your infrastructure to AWS, Azure, GCP.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Cloud Architecture</div><div class="service-info-desc">Design scalable, secure cloud systems.</div></div>
+                <div class="service-info-card"><div class="service-info-title">DevOps Automation</div><div class="service-info-desc">CI/CD pipelines, containerization, IaC.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Serverless Solutions</div><div class="service-info-desc">Lambda, Functions, and event-driven apps.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Cloud Security</div><div class="service-info-desc">Identity, access, and data protection.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Managed Hosting</div><div class="service-info-desc">Reliable, monitored cloud hosting services.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Database Services</div><div class="service-info-desc">Cloud databases, backups, and scaling.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Monitoring & Analytics</div><div class="service-info-desc">Cloud performance and usage insights.</div></div>
               </div>
-
-              <div class="tab-pane fade" id="ai-ml-tab">
-                <div class="row">
-                  <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                    <h3>AI & Machine Learning Solutions</h3>
-                    <p>
-                      We implement intelligent solutions that automate processes and provide data-driven insights for business growth.
-                    </p>
-                    <ul>
-                      <li><i class="bi bi-check2-all"></i> <span>Predictive Analytics</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Natural Language Processing</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Computer Vision Applications</span></li>
-                      <li><i class="bi bi-check2-all"></i> <span>Chatbot Development</span></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6 order-1 order-lg-2 text-center">
-                    <img src="./assets/img/working-4.jpg" alt="" class="img-fluid">
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="ai-ml" role="tabpanel" aria-labelledby="ai-ml-tab">
+            <div class="service-info-grid-container">
+              <div class="service-info-grid">
+                <div class="service-info-card"><div class="service-info-title">AI Strategy Consulting</div><div class="service-info-desc">Roadmaps for AI adoption and success.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Machine Learning Models</div><div class="service-info-desc">Custom ML solutions for your data.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Natural Language Processing</div><div class="service-info-desc">Text, speech, and chatbot solutions.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Computer Vision</div><div class="service-info-desc">Image recognition and analysis tools.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Predictive Analytics</div><div class="service-info-desc">Forecasting and data-driven decisions.</div></div>
+                <div class="service-info-card"><div class="service-info-title">AI Automation</div><div class="service-info-desc">Automate workflows and business processes.</div></div>
+                <div class="service-info-card"><div class="service-info-title">Data Engineering</div><div class="service-info-desc">Data pipelines, cleaning, and transformation.</div></div>
+                <div class="service-info-card"><div class="service-info-title">AI Integration</div><div class="service-info-desc">Embed AI into your apps and platforms.</div></div>
               </div>
             </div>
           </div>
         </div>
+         </div>
       </div>
+      <!-- End Service Details Tabs with 4x2 Grid in Each Tab -->
 
     </section><!-- /Services Section -->
 
